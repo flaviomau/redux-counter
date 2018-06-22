@@ -6,7 +6,10 @@ import Counter from './Counter'
 import counterReducer from './reducer'
 import DisplayCounter from './DisplayCounter'
 
-let store = createStore(counterReducer)
+let store = createStore(
+  counterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 class App extends Component {
   render() {
