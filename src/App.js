@@ -6,6 +6,7 @@ import logger from 'redux-logger'
 import Counter from './Counter'
 import counterReducer from './reducer'
 import DisplayCounter from './DisplayCounter'
+import Greeting from './Greeting';
 
 let store = createStore(
   counterReducer,
@@ -20,6 +21,7 @@ class App extends Component {
         <div className="App">
           <Counter />
           <DisplayCounter />
+          <Greeting name='John'/>
         </div>
       </Provider>      
     )
